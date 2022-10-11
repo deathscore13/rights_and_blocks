@@ -12,7 +12,7 @@ const RIGHTS_AND_BLOCKS_INFO = [
     'description' => LANG_RIGHTS_AND_BLOCKS[17],
     'version' => RIGHTS_AND_BLOCKS_VERSION,
     'author' => 'DeathScore13',
-    'url' => '*link*',
+    'url' => 'https://github.com/deathscore13/rights_and_blocks',
 ];
 
 require('rights.php');

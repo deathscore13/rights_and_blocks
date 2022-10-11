@@ -9,7 +9,7 @@ const LANG_RIGHTS_AND_BLOCKS = [
     /* 05 */    'No rights',
     /* 06 */    'Member rights:',
     /* 07 */    '<right> <0/1> <target> [peer_id/chats/pm/every or current chat by default]',
-    /* 08 */    'All rights',
+    /* 08 */    'All rights (can only be issued by the chat administrator)',
     /* 09 */    'List of rights:',
     /* 10 */    'you must have right: %s',
     /* 11 */    'right already registered: %s',

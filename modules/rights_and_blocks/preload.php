@@ -78,7 +78,7 @@ $m->regCmd(['blocks', LANG_RIGHTS_AND_BLOCKS[23]], LANG_RIGHTS_AND_BLOCKS[24], [
     ]
 ]);
 
-function preloadEnd_rights()
+function preloadEnd_rights_and_blocks()
 {
     global $rights, $blocks;
     $rights->blockRegs();

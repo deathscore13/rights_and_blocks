@@ -6,7 +6,7 @@ if ($m->cmd('rights'))
     {
         $chat = $m->param(4);
 
-        if (!$vk->isOwner($vk->obj['from_id']))
+        if (!$vk->isAdmin($vk->obj['from_id']))
         {
             if ($chat === false || $chat === $rights->getChat())
             {

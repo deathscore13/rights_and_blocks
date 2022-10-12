@@ -25,7 +25,7 @@ if ($m->cmd('rights'))
         if (!$m->param(3, [0, 1]))
             $m->error(LANG_RIGHTS_AND_BLOCKS[1]);
         
-        if (($target = $m->getTarget(1)) === false)
+        if (($target = $m->target(1)) === false)
             $m->error(LANG_ENGINE[7], 1);
         
         if (!$rights->setRight($target, $right, $m->param(3), $chat === false ? '' : $chat))
@@ -35,7 +35,7 @@ if ($m->cmd('rights'))
     }
     else if ($m->param(1, ['info', LANG_RIGHTS_AND_BLOCKS[20]]))
     {
-        if (($target = $m->getTarget(1)) === false)
+        if (($target = $m->target(1)) === false)
             $m->error(LANG_ENGINE[7], 1);
         
         $send = '';
@@ -103,7 +103,7 @@ else if ($m->cmd('blocks'))
         if (!$m->param(3, [0, 1]))
             $m->error(LANG_RIGHTS_AND_BLOCKS[1]);
         
-        if (($target = $m->getTarget(1)) === false)
+        if (($target = $m->target(1)) === false)
             $m->error(LANG_ENGINE[7], 1);
         
         if (!$blocks->setBlock($target, $block, $m->param(3), $chat === false ? '' : $chat))
@@ -113,7 +113,7 @@ else if ($m->cmd('blocks'))
     }
     else if ($m->param(1, ['info', LANG_RIGHTS_AND_BLOCKS[20]]))
     {
-        if (($target = $m->getTarget(1)) === false)
+        if (($target = $m->target(1)) === false)
             $m->error(LANG_ENGINE[7], 1);
         
         $send = '';

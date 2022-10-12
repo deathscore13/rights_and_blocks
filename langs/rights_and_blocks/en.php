@@ -18,7 +18,7 @@ const LANG_RIGHTS_AND_BLOCKS = [
     /* 14 */    'Learn member rights',
     /* 15 */    'List with names and descriptions of available rights',
     /* 16 */    'Rights management',
-    /* 17 */    'Adds rights system',
+    /* 17 */    'Adds rights and blocks system',
     /* 18 */    'rights',
     /* 19 */    'set',
     /* 20 */    'info',

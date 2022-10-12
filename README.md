@@ -29,7 +29,7 @@
 
 <br><br>
 ## Требования
-1. BotEngineVK.
+1. [BotEngineVK](https://github.com/deathscore13/BotEngineVK).
 
 <br><br>
 ## Установка

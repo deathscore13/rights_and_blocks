@@ -1,7 +1,7 @@
 <?php
 
 const LANG_RIGHTS_AND_BLOCKS = [
-    /* 00 */    'you must be an admin in the chat or have root right',
+    /* 00 */    'you must be the chat creator or have root right',
     /* 01 */    'right value must be 0 or 1',
     /* 02 */    'invalid right or chat',
     /* 03 */    'Right changed successfully',
@@ -9,7 +9,7 @@ const LANG_RIGHTS_AND_BLOCKS = [
     /* 05 */    'No rights',
     /* 06 */    'Member rights:',
     /* 07 */    '<right> <0/1> <target> [peer_id/chats/pm/every or current chat by default]',
-    /* 08 */    'All rights (can only be issued by the chat administrator)',
+    /* 08 */    'All rights (only the creator of the chat can issue)',
     /* 09 */    'List of rights:',
     /* 10 */    'you must have right: %s',
     /* 11 */    'right already registered: %s',

@@ -5,7 +5,7 @@ const LANG_RIGHTS_AND_BLOCKS = [
     /* 01 */    'right value must be 0 or 1',
     /* 02 */    'invalid right or chat',
     /* 03 */    'Right changed successfully',
-    /* 04 */    'Chat administrator',
+    /* 04 */    'Chat creator',
     /* 05 */    'No rights',
     /* 06 */    'Member rights:',
     /* 07 */    '<right> <0/1> <target> [peer_id/chats/pm/every or current chat by default]',

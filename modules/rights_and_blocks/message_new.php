@@ -6,7 +6,7 @@ if ($m->cmd('rights'))
     {
         $chat = $m->param(4);
 
-        if (!$vk->isAdmin($vk->obj['from_id']))
+        if (!$vk->isOwner($vk->obj['from_id']))
         {
             if ($chat === false || $chat === $rights->getChat())
             {
@@ -39,7 +39,7 @@ if ($m->cmd('rights'))
             $m->error(LANG_ENGINE[7], 1);
         
         $send = '';
-        if ($vk->isAdmin($target))
+        if ($vk->isOwner($target))
             $send = PHP_EOL.LANG_RIGHTS_AND_BLOCKS[4].PHP_EOL;
 
         foreach ($db->query('SELECT * FROM '.Rights::TABLE.' WHERE id LIKE \''.$target.'_%\'', PDO::FETCH_ASSOC) as $row)
@@ -84,17 +84,14 @@ else if ($m->cmd('blocks'))
     {
         $chat = $m->param(4);
 
-        if (!$vk->isAdmin($vk->obj['from_id']))
+        if ($chat === false || $chat === $rights->getChat())
         {
-            if ($chat === false || $chat === $rights->getChat())
-            {
-                if (!$rights->isRight($vk->obj['from_id'], 'blocks'))
-                    $m->error(LANG_RIGHTS_AND_BLOCKS[10], 'blocks');
-            }
-            else if (!$rights->isRight($vk->obj['from_id'], 'blocks', $chat))
-            {
-                $m->error(LANG_RIGHTS_AND_BLOCKS[30], $chat);
-            }
+            if (!$rights->isRight($vk->obj['from_id'], 'blocks'))
+                $m->error(LANG_RIGHTS_AND_BLOCKS[10], 'blocks');
+        }
+        else if (!$rights->isRight($vk->obj['from_id'], 'blocks', $chat))
+        {
+            $m->error(LANG_RIGHTS_AND_BLOCKS[30], $chat);
         }
 
         if (($block = $m->param(2)) === false)
